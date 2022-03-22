@@ -58,6 +58,7 @@ const usuariosPut = async(req, res = response) => {
         resto
     });
 }
+
 const usuariosdelete = async (req, res = response) => {
 
     const {id} = req.params;

@@ -48,7 +48,18 @@ const existProductoId= async(id)=>{
     }
 }
 
+const collectionPermitida = async(colecion="", colecciones=[]) =>{
+
+
+    const incluida = colecciones.includes(colecion);
+
+    if (!incluida){
+        throw Error (`la ${colecion} no esta permitida : ${colecciones}`);
+    }
+    return true;
+}
+
 module.exports = {
 
-    existRolValidate, existEmail, existUserId, existCategoriaId, existProductoId
+    existRolValidate, existEmail, existUserId, existCategoriaId, existProductoId,collectionPermitida
 }
